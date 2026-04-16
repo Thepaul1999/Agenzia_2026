@@ -13,14 +13,14 @@ export default function Home(){
         Sito Agenzia Web
       </h1>
       <p className="text-xl mb-8 text-center max-w-2xl mx-auto">
-        Editor visuale drag & drop
+        edit visuale drag & drop
       </p>
       <div className="text-center">
         <Link
           href="/main"
           className="px-8 py-4 bg-blue-500 text-white rounded-xl hover:bg-blue-600"
         >
-          Inizia Editor
+          Inizia edit
         </Link>
       </div>
     </div>

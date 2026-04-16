@@ -5,16 +5,16 @@ import { useParams } from 'next/navigation';
 import grapesjs from 'grapesjs';
 import 'grapesjs/dist/css/grapes.min.css';
 
-export default function EditorPage() {
-  const editorRef = useRef<HTMLDivElement | null>(null);
+export default function editPage() {
+  const editRef = useRef<HTMLDivElement | null>(null);
   const params = useParams();
   const projectId = Array.isArray(params.id) ? params.id[0] : params.id;
 
   useEffect(() => {
-    if (!editorRef.current || !projectId) return;
+    if (!editRef.current || !projectId) return;
 
-    const editor = grapesjs.init({
-      container: editorRef.current,
+    const edit = grapesjs.init({
+      container: editRef.current,
       height: '100vh',
       fromElement: false,
       storageManager: {
@@ -35,8 +35,8 @@ export default function EditorPage() {
       },
     });
 
-    return () => editor.destroy();
+    return () => edit.destroy();
   }, [projectId]);
 
-  return <div ref={editorRef} />;
+  return <div ref={editRef} />;
 }

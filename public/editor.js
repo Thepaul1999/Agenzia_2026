@@ -1,84 +1,38 @@
-/****************************************************
- *  EDITOR GRAPESJS – VERSIONE DEFINITIVA
- *  Importa il tuo index.html SENZA ROMPERLO
- ****************************************************/
+(async function () {
+  const canvasStyles = [
+    '/assets/external/vendor/grapes.min.css'
+  ];
 
-const editor = grapesjs.init({
+  try {
+    const res = await fetch('/style.css', { method: 'HEAD' });
+    if (res.ok) canvasStyles.unshift('/style.css');
+  } catch (e) {}
+
+  const editor = grapesjs.init({
     container: '#gjs',
     height: '100vh',
     fromElement: false,
-
-    storageManager: {
-        type: 'local',
-        autosave: true,
-        autoload: true
-    },
-
+    storageManager: false,
     canvas: {
-        styles: [
-            "../style.css",
-            "https://unpkg.com/grapesjs/dist/css/grapes.min.css"
-        ]
-    },
-
-    parser: {
-        htmlType: 'text/html',
+      styles: canvasStyles
     }
-});
+  });
 
-/****************************************************
- *  IMPORTA IL TUO index.html ORIGINALE
- *  RIMUOVENDO SOLO LE COSE CHE BLOCCANO GRAPESJS
- ****************************************************/
+  try {
+    const res = await fetch('/templates/index.html');
+    if (!res.ok) throw new Error('Template non trovato: /templates/index.html');
+    let html = await res.text();
 
-fetch('./templates/index.html')
-    .then(res => res.text())
-    .then(html => {
+    html = html
+      .replace(/<!DOCTYPE[^>]*>/gi, '')
+      .replace(/<html[^>]*>/gi, '')
+      .replace(/<\/html>/gi, '')
+      .replace(/<head[\s\S]*?<\/head>/gi, '')
+      .replace(/<script[\s\S]*?<\/script>/gi, '');
 
-        // Rimuove SOLO quello che blocca GrapesJS
-        html = html
-            .replace(/<!DOCTYPE[^>]*>/gi, "")
-            .replace(/<html[^>]*>/gi, "")
-            .replace(/<\/html>/gi, "")
-            .replace(/<head[^>]*>[\s\S]*?<\/head>/gi, "")
-            .replace(/<script[\s\S]*?<\/script>/gi, "");
-
-        const components = editor.Parser.parseHtml(html);
-        editor.getWrapper().setComponents(components);
-    });
-
-/****************************************************
- *  FIX: Rende cliccabile e editabile TUTTO
- ****************************************************/
-editor.addStyle(`
-    *[contenteditable] {
-        cursor: text !important;
-        outline: 1px dashed rgba(255,255,255,0.4);
-    }
-    .overlay-colored {
-        pointer-events: none !important;
-    }
-`);
-
-/****************************************************
- *  AGGIUNGE "LOGIN" in alto a destra
- ****************************************************/
-editor.on('load', () => {
-    const iframe = editor.Canvas.getFrameEl();
-    const login = iframe.contentDocument.createElement('a');
-
-    login.innerText = "Login";
-    login.href = "#";
-    login.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 25px;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        z-index: 99999;
-        text-decoration: none;
-    `;
-
-    iframe.contentDocument.body.appendChild(login);
-});
+    editor.setComponents(html);
+  } catch (err) {
+    console.error(err);
+    editor.setComponents('<section style="padding:40px;font-family:Arial,sans-serif;"><h1>Errore editor</h1><p>' + err.message + '</p></section>');
+  }
+})();
