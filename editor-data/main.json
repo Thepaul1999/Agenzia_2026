@@ -1,0 +1,1647 @@
+{
+  "dataSources": [],
+  "assets": [],
+  "styles": [],
+  "pages": [
+    {
+      "frames": [
+        {
+          "component": {
+            "type": "wrapper",
+            "stylable": [
+              "background",
+              "background-color",
+              "background-image",
+              "background-repeat",
+              "background-attachment",
+              "background-position",
+              "background-size"
+            ],
+            "components": [
+              {
+                "type": "comment",
+                "content": " Header "
+              },
+              {
+                "type": "comment",
+                "content": " Banner "
+              },
+              {
+                "tagName": "section",
+                "classes": [
+                  "gjs-section"
+                ],
+                "attributes": {
+                  "id": "ilvbo5"
+                },
+                "components": [
+                  {
+                    "classes": [
+                      "gjs-container"
+                    ],
+                    "components": [
+                      {
+                        "classes": [
+                          "gjs-plg-flex-row"
+                        ],
+                        "attributes": {
+                          "data-type-role": "flex-row",
+                          "id": "i2ca5s"
+                        },
+                        "components": [
+                          {
+                            "classes": [
+                              "gjs-plg-flex-column"
+                            ],
+                            "attributes": {
+                              "data-type-role": "flex-column",
+                              "id": "ik30kw"
+                            },
+                            "components": [
+                              {
+                                "type": "link",
+                                "editable": false,
+                                "classes": [
+                                  "gjs-link-box"
+                                ],
+                                "attributes": {
+                                  "id": "isa9s1"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "h1",
+                                    "type": "text",
+                                    "attributes": {
+                                      "id": "io3aji"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "DreamSpace"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "classes": [
+                              "gjs-plg-flex-column"
+                            ],
+                            "attributes": {
+                              "data-type-role": "flex-column",
+                              "id": "iegj7t"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "classes": [
+                                  "info-call"
+                                ],
+                                "attributes": {
+                                  "id": "iqrvq"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "i",
+                                    "classes": [
+                                      "fa",
+                                      "fa-phone"
+                                    ],
+                                    "attributes": {
+                                      "id": "i1qsr"
+                                    }
+                                  },
+                                  {
+                                    "type": "textnode",
+                                    "content": "Free Call: 01093515252\n            "
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tagName": "section",
+                "classes": [
+                  "gjs-section"
+                ],
+                "attributes": {
+                  "id": "iwfdv6"
+                },
+                "components": [
+                  {
+                    "classes": [
+                      "gjs-container"
+                    ],
+                    "attributes": {
+                      "id": "izpm9c"
+                    },
+                    "components": [
+                      {
+                        "classes": [
+                          "gjs-plg-flex-row"
+                        ],
+                        "attributes": {
+                          "data-type-role": "flex-row",
+                          "id": "ijjk1l"
+                        },
+                        "components": [
+                          {
+                            "classes": [
+                              "gjs-plg-flex-column"
+                            ],
+                            "attributes": {
+                              "data-type-role": "flex-column",
+                              "id": "i1szom"
+                            },
+                            "components": [
+                              {
+                                "tagName": "h1",
+                                "type": "text",
+                                "attributes": {
+                                  "id": "i4mxj"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "Find your dream house"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "p",
+                                "type": "text",
+                                "classes": [
+                                  "description"
+                                ],
+                                "attributes": {
+                                  "id": "ichok"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "\n              Discover the perfect property that matches your lifestyle\n              "
+                                  },
+                                  {
+                                    "tagName": "br",
+                                    "void": true
+                                  },
+                                  {
+                                    "type": "textnode",
+                                    "content": "\n              Start your journey to homeownership today\n            "
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "button",
+                                "type": "text",
+                                "attributes": {
+                                  "type": "button",
+                                  "id": "ihd71y-2"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "Your Dream House Here"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "comment",
+                "content": " Services "
+              },
+              {
+                "tagName": "section",
+                "classes": [
+                  "gjs-section"
+                ],
+                "attributes": {
+                  "id": "imgkpp"
+                },
+                "components": [
+                  {
+                    "classes": [
+                      "gjs-container"
+                    ],
+                    "components": [
+                      {
+                        "classes": [
+                          "gjs-plg-flex-row"
+                        ],
+                        "attributes": {
+                          "data-type-role": "flex-row",
+                          "id": "irxq76"
+                        },
+                        "components": [
+                          {
+                            "classes": [
+                              "gjs-plg-flex-column"
+                            ],
+                            "attributes": {
+                              "data-type-role": "flex-column",
+                              "id": "io9tk4"
+                            },
+                            "components": [
+                              {
+                                "tagName": "h2",
+                                "type": "text",
+                                "attributes": {
+                                  "id": "irvbd"
+                                },
+                                "components": [
+                                  {
+                                    "type": "textnode",
+                                    "content": "Get your way to know more about your new house"
+                                  }
+                                ]
+                              },
+                              {
+                                "classes": [
+                                  "gjs-plg-flex-row"
+                                ],
+                                "attributes": {
+                                  "data-type-role": "flex-row",
+                                  "id": "insr3l"
+                                },
+                                "components": [
+                                  {
+                                    "classes": [
+                                      "gjs-plg-flex-column"
+                                    ],
+                                    "attributes": {
+                                      "data-type-role": "flex-column",
+                                      "id": "is6a9e"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "image",
+                                        "resizable": {
+                                          "ratioDefault": 1
+                                        },
+                                        "attributes": {
+                                          "id": "isnoec-2",
+                                          "src": "../assets/external/images/cbdb26f0-2a18-4a8d-ac7f-0932ba331fa9__compass.png"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "classes": [
+                                      "gjs-plg-flex-column"
+                                    ],
+                                    "attributes": {
+                                      "data-type-role": "flex-column",
+                                      "id": "iuyv4i"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "text",
+                                        "attributes": {
+                                          "id": "ift49"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Explore New Areas"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "tagName": "p",
+                                        "type": "text",
+                                        "attributes": {
+                                          "id": "ielxi"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Discover diverse neighborhoods and find the perfect location that suits your lifestyle and preferences."
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "classes": [
+                                  "gjs-plg-flex-row"
+                                ],
+                                "attributes": {
+                                  "data-type-role": "flex-row",
+                                  "id": "i7ttw4"
+                                },
+                                "components": [
+                                  {
+                                    "classes": [
+                                      "gjs-plg-flex-column"
+                                    ],
+                                    "attributes": {
+                                      "data-type-role": "flex-column",
+                                      "id": "iqij0b"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "image",
+                                        "resizable": {
+                                          "ratioDefault": 1
+                                        },
+                                        "attributes": {
+                                          "id": "isnoec",
+                                          "src": "../assets/external/images/eaee0d51-47dd-4667-a593-3e7e87b0ac3c__witness.png"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "classes": [
+                                      "gjs-plg-flex-column"
+                                    ],
+                                    "attributes": {
+                                      "data-type-role": "flex-column",
+                                      "id": "iuuc9b"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "text",
+                                        "attributes": {
+                                          "id": "iklgj"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Get a Fresh Perspective"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "tagName": "p",
+                                        "type": "text",
+                                        "attributes": {
+                                          "id": "inhd9"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "View properties from different angles and explore virtual tours to make informed decisions."
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "classes": [
+                              "gjs-plg-flex-column"
+                            ],
+                            "attributes": {
+                              "data-type-role": "flex-column",
+                              "id": "iwpmwi"
+                            },
+                            "components": [
+                              {
+                                "classes": [
+                                  "form-card"
+                                ],
+                                "attributes": {
+                                  "id": "io6vp"
+                                },
+                                "components": [
+                                  {
+                                    "classes": [
+                                      "form-header"
+                                    ],
+                                    "attributes": {
+                                      "id": "iuvog"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "text",
+                                        "components": [
+                                          {
+                                            "type": "textnode",
+                                            "content": "Find Your Dream House"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tagName": "form",
+                                    "attributes": {
+                                      "method": "get",
+                                      "id": "form-register-house"
+                                    },
+                                    "components": [
+                                      {
+                                        "classes": [
+                                          "form-group"
+                                        ],
+                                        "components": [
+                                          {
+                                            "type": "label",
+                                            "attributes": {
+                                              "for": "rhName",
+                                              "id": "i2ots"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "Full Name"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tagName": "input",
+                                            "void": true,
+                                            "classes": [
+                                              "form-control"
+                                            ],
+                                            "attributes": {
+                                              "type": "text",
+                                              "name": "rhName",
+                                              "id": "rhName"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "classes": [
+                                          "form-group"
+                                        ],
+                                        "components": [
+                                          {
+                                            "type": "label",
+                                            "attributes": {
+                                              "for": "rhEmail"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "Business Email"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tagName": "input",
+                                            "void": true,
+                                            "classes": [
+                                              "form-control"
+                                            ],
+                                            "attributes": {
+                                              "type": "text",
+                                              "name": "rhEmail",
+                                              "id": "rhEmail"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "classes": [
+                                          "form-group"
+                                        ],
+                                        "components": [
+                                          {
+                                            "type": "label",
+                                            "attributes": {
+                                              "for": "rhPhoneNum"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "Phone Number"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tagName": "input",
+                                            "void": true,
+                                            "classes": [
+                                              "form-control"
+                                            ],
+                                            "attributes": {
+                                              "type": "text",
+                                              "name": "rhPhoneNum",
+                                              "id": "rhPhoneNum"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "classes": [
+                                          "form-group"
+                                        ],
+                                        "components": [
+                                          {
+                                            "type": "label",
+                                            "attributes": {
+                                              "for": "rhCompName"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "Company Name"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tagName": "input",
+                                            "void": true,
+                                            "classes": [
+                                              "form-control"
+                                            ],
+                                            "attributes": {
+                                              "type": "text",
+                                              "name": "rhCompName",
+                                              "id": "rhCompName"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "classes": [
+                                          "form-group"
+                                        ],
+                                        "attributes": {
+                                          "id": "i1vqp"
+                                        },
+                                        "components": [
+                                          {
+                                            "tagName": "button",
+                                            "type": "text",
+                                            "attributes": {
+                                              "type": "button",
+                                              "id": "ijux7f"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "your dream house here"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "comment",
+                "content": " Featured Properties "
+              },
+              {
+                "tagName": "section",
+                "classes": [
+                  "gjs-section"
+                ],
+                "attributes": {
+                  "id": "ics9ug"
+                },
+                "components": [
+                  {
+                    "classes": [
+                      "gjs-container"
+                    ],
+                    "attributes": {
+                      "id": "i0h63k"
+                    },
+                    "components": [
+                      {
+                        "tagName": "h2",
+                        "type": "text",
+                        "attributes": {
+                          "id": "i0btm"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "Featured Properties"
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "p",
+                        "type": "text",
+                        "attributes": {
+                          "id": "ixmy8"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "\n          Browse our selection of handpicked properties\n          "
+                          },
+                          {
+                            "tagName": "br",
+                            "void": true
+                          },
+                          {
+                            "type": "textnode",
+                            "content": "\n          carefully curated to meet your expectations\n        "
+                          }
+                        ]
+                      },
+                      {
+                        "classes": [
+                          "swiper"
+                        ],
+                        "attributes": {
+                          "id": "i8db2k"
+                        },
+                        "components": [
+                          {
+                            "classes": [
+                              "swiper-wrapper"
+                            ],
+                            "attributes": {
+                              "id": "iru5ll"
+                            },
+                            "components": [
+                              {
+                                "classes": [
+                                  "swiper-slide"
+                                ],
+                                "attributes": {
+                                  "id": "idnurt"
+                                },
+                                "components": [
+                                  {
+                                    "type": "image",
+                                    "resizable": {
+                                      "ratioDefault": 1
+                                    },
+                                    "attributes": {
+                                      "src": "../assets/external/images/ffdf4c74-6a62-452d-a93f-330edfcd6989__lp-dreamspace-1.webp",
+                                      "alt": "Atlanta, GA",
+                                      "id": "idcjq"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h4",
+                                    "type": "text",
+                                    "attributes": {
+                                      "id": "i7zea5"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "Atlanta, GA"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tagName": "span",
+                                    "type": "text",
+                                    "classes": [
+                                      "price"
+                                    ],
+                                    "attributes": {
+                                      "id": "i25tqx-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "$200,530"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "classes": [
+                                  "swiper-slide"
+                                ],
+                                "attributes": {
+                                  "id": "ix366h"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "classes": [
+                                      "featured-badge"
+                                    ],
+                                    "attributes": {
+                                      "id": "iwm8an"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "Featured"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "image",
+                                    "resizable": {
+                                      "ratioDefault": 1
+                                    },
+                                    "attributes": {
+                                      "src": "../assets/external/images/f4582946-35e5-4ff7-b746-149dbb836c02__lp-dreamspace-4.webp",
+                                      "alt": "Ocean Loft, GA",
+                                      "id": "ita88x"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h4",
+                                    "type": "text",
+                                    "attributes": {
+                                      "id": "i3iamr"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "Ocean Loft, GA"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tagName": "span",
+                                    "type": "text",
+                                    "classes": [
+                                      "price"
+                                    ],
+                                    "attributes": {
+                                      "id": "ixcpa4"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "$125,400"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "classes": [
+                                  "swiper-slide"
+                                ],
+                                "attributes": {
+                                  "id": "ikig52"
+                                },
+                                "components": [
+                                  {
+                                    "type": "image",
+                                    "resizable": {
+                                      "ratioDefault": 1
+                                    },
+                                    "attributes": {
+                                      "src": "../assets/external/images/6b0ab7b2-4eda-4266-a839-4b1c0f5b2f18__lp-dreamspace-3.webp",
+                                      "alt": "West Milford, NJ",
+                                      "id": "iwdh6h"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h4",
+                                    "type": "text",
+                                    "attributes": {
+                                      "id": "ihkre3"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "West Milford, NJ"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tagName": "span",
+                                    "type": "text",
+                                    "classes": [
+                                      "price"
+                                    ],
+                                    "attributes": {
+                                      "id": "ik3iwq"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "$158,900"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "classes": [
+                                  "swiper-slide"
+                                ],
+                                "attributes": {
+                                  "id": "izimn9"
+                                },
+                                "components": [
+                                  {
+                                    "type": "image",
+                                    "resizable": {
+                                      "ratioDefault": 1
+                                    },
+                                    "attributes": {
+                                      "src": "../assets/external/images/ffdf4c74-6a62-452d-a93f-330edfcd6989__lp-dreamspace-1.webp",
+                                      "alt": "Atlanta, GA",
+                                      "id": "idcjq-2"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h4",
+                                    "type": "text",
+                                    "attributes": {
+                                      "id": "i7zea5-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "Atlanta, GA"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tagName": "span",
+                                    "type": "text",
+                                    "classes": [
+                                      "price"
+                                    ],
+                                    "attributes": {
+                                      "id": "i25tqx-2-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "$200,530"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "classes": [
+                                  "swiper-slide"
+                                ],
+                                "attributes": {
+                                  "id": "iyw68r"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "classes": [
+                                      "featured-badge"
+                                    ],
+                                    "attributes": {
+                                      "id": "iwm8an-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "Featured"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "image",
+                                    "resizable": {
+                                      "ratioDefault": 1
+                                    },
+                                    "attributes": {
+                                      "src": "../assets/external/images/f4582946-35e5-4ff7-b746-149dbb836c02__lp-dreamspace-4.webp",
+                                      "alt": "Ocean Loft, GA",
+                                      "id": "ita88x-2"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h4",
+                                    "type": "text",
+                                    "attributes": {
+                                      "id": "i3iamr-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "Ocean Loft, GA"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tagName": "span",
+                                    "type": "text",
+                                    "classes": [
+                                      "price"
+                                    ],
+                                    "attributes": {
+                                      "id": "ixcpa4-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "$125,400"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "classes": [
+                                  "swiper-slide"
+                                ],
+                                "attributes": {
+                                  "id": "i36bv7"
+                                },
+                                "components": [
+                                  {
+                                    "type": "image",
+                                    "resizable": {
+                                      "ratioDefault": 1
+                                    },
+                                    "attributes": {
+                                      "src": "../assets/external/images/6b0ab7b2-4eda-4266-a839-4b1c0f5b2f18__lp-dreamspace-3.webp",
+                                      "alt": "West Milford, NJ",
+                                      "id": "iwdh6h-2"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h4",
+                                    "type": "text",
+                                    "attributes": {
+                                      "id": "ihkre3-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "West Milford, NJ"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "tagName": "span",
+                                    "type": "text",
+                                    "classes": [
+                                      "price"
+                                    ],
+                                    "attributes": {
+                                      "id": "ik3iwq-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "textnode",
+                                        "content": "$158,900"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "classes": [
+                              "swiper-pagination"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "comment",
+                "content": " Video "
+              },
+              {
+                "tagName": "section",
+                "classes": [
+                  "gjs-section"
+                ],
+                "attributes": {
+                  "id": "imuvkx"
+                },
+                "components": [
+                  {
+                    "classes": [
+                      "gjs-container"
+                    ],
+                    "attributes": {
+                      "id": "i01m1i"
+                    },
+                    "components": [
+                      {
+                        "tagName": "h2",
+                        "type": "text",
+                        "attributes": {
+                          "id": "is23c9"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "Watch Our Video"
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "p",
+                        "type": "text",
+                        "attributes": {
+                          "id": "isjduy"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "\n          Take a virtual tour and explore what makes us different\n          "
+                          },
+                          {
+                            "tagName": "br",
+                            "void": true
+                          },
+                          {
+                            "type": "textnode",
+                            "content": "\n          See how we help you find your dream home\n        "
+                          }
+                        ]
+                      },
+                      {
+                        "type": "image",
+                        "resizable": {
+                          "ratioDefault": 1
+                        },
+                        "attributes": {
+                          "src": "../assets/external/images/d2526d0f-603c-43e5-8f82-83d3b36a6be3__lp-dreamspace-2.webp",
+                          "alt": "Video Preview",
+                          "id": "i3aauk"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "comment",
+                "content": " Testimonials "
+              },
+              {
+                "tagName": "section",
+                "classes": [
+                  "gjs-section"
+                ],
+                "attributes": {
+                  "id": "iwgm2h"
+                },
+                "components": [
+                  {
+                    "classes": [
+                      "gjs-container"
+                    ],
+                    "attributes": {
+                      "id": "ix9hv1"
+                    },
+                    "components": [
+                      {
+                        "tagName": "h2",
+                        "type": "text",
+                        "attributes": {
+                          "id": "i2mqof"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "\n          Some Clients Got Their Ways\n          "
+                          },
+                          {
+                            "tagName": "br",
+                            "void": true
+                          },
+                          {
+                            "type": "textnode",
+                            "content": "\n          to Find Dream House\n        "
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "p",
+                        "type": "text",
+                        "attributes": {
+                          "id": "im52ii"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "\n          Read success stories from our satisfied clients\n          "
+                          },
+                          {
+                            "tagName": "br",
+                            "void": true
+                          },
+                          {
+                            "type": "textnode",
+                            "content": "\n          who found their perfect homes with us\n        "
+                          }
+                        ]
+                      },
+                      {
+                        "classes": [
+                          "swiper"
+                        ],
+                        "attributes": {
+                          "id": "i6r7zf"
+                        },
+                        "components": [
+                          {
+                            "classes": [
+                              "swiper-wrapper"
+                            ],
+                            "attributes": {
+                              "id": "i2hvdt"
+                            },
+                            "components": [
+                              {
+                                "classes": [
+                                  "swiper-slide"
+                                ],
+                                "attributes": {
+                                  "id": "ib7xo5"
+                                },
+                                "components": [
+                                  {
+                                    "classes": [
+                                      "gjs-plg-flex-row"
+                                    ],
+                                    "attributes": {
+                                      "data-type-role": "flex-row",
+                                      "id": "ii17cl"
+                                    },
+                                    "components": [
+                                      {
+                                        "classes": [
+                                          "gjs-plg-flex-column"
+                                        ],
+                                        "attributes": {
+                                          "data-type-role": "flex-column",
+                                          "id": "i9sb5k"
+                                        },
+                                        "components": [
+                                          {
+                                            "tagName": "span",
+                                            "type": "text",
+                                            "attributes": {
+                                              "id": "iquwul"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "\""
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "classes": [
+                                          "gjs-plg-flex-column"
+                                        ],
+                                        "attributes": {
+                                          "data-type-role": "flex-column",
+                                          "id": "iadwih"
+                                        },
+                                        "components": [
+                                          {
+                                            "tagName": "p",
+                                            "attributes": {
+                                              "id": "i3lp1k"
+                                            },
+                                            "components": [
+                                              {
+                                                "tagName": "em",
+                                                "type": "text",
+                                                "components": [
+                                                  {
+                                                    "type": "textnode",
+                                                    "content": "\"Working with DreamSpace was an amazing experience. They helped us find exactly what we were looking for in a home and made the process smooth and easy.\""
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "classes": [
+                                      "gjs-divider"
+                                    ],
+                                    "attributes": {
+                                      "id": "ihpxra"
+                                    }
+                                  },
+                                  {
+                                    "classes": [
+                                      "gjs-plg-flex-row"
+                                    ],
+                                    "attributes": {
+                                      "data-type-role": "flex-row",
+                                      "id": "i6lw2h"
+                                    },
+                                    "components": [
+                                      {
+                                        "classes": [
+                                          "gjs-plg-flex-column"
+                                        ],
+                                        "attributes": {
+                                          "data-type-role": "flex-column",
+                                          "id": "i9gfbu"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "image",
+                                            "resizable": {
+                                              "ratioDefault": 1
+                                            },
+                                            "classes": [
+                                              "author-avatar"
+                                            ],
+                                            "attributes": {
+                                              "src": "../assets/external/images/9fa2df55-78c5-42aa-b574-8d6c598dab6e__lp-dreamspace-5.webp",
+                                              "alt": "Mark Smith",
+                                              "id": "ij1fve"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "classes": [
+                                          "gjs-plg-flex-column"
+                                        ],
+                                        "attributes": {
+                                          "data-type-role": "flex-column",
+                                          "id": "iux5ya"
+                                        },
+                                        "components": [
+                                          {
+                                            "tagName": "h5",
+                                            "type": "text",
+                                            "attributes": {
+                                              "id": "i9uet8"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "Mark Smith"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tagName": "span",
+                                            "type": "text",
+                                            "attributes": {
+                                              "id": "iejx4q"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "Envato Inc"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "classes": [
+                                  "swiper-slide"
+                                ],
+                                "attributes": {
+                                  "id": "iol14n"
+                                },
+                                "components": [
+                                  {
+                                    "classes": [
+                                      "gjs-plg-flex-row"
+                                    ],
+                                    "attributes": {
+                                      "data-type-role": "flex-row",
+                                      "id": "iptp5w"
+                                    },
+                                    "components": [
+                                      {
+                                        "classes": [
+                                          "gjs-plg-flex-column"
+                                        ],
+                                        "attributes": {
+                                          "data-type-role": "flex-column",
+                                          "id": "ihmymm"
+                                        },
+                                        "components": [
+                                          {
+                                            "tagName": "span",
+                                            "type": "text",
+                                            "attributes": {
+                                              "id": "iquwul-2"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "\""
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "classes": [
+                                          "gjs-plg-flex-column"
+                                        ],
+                                        "attributes": {
+                                          "data-type-role": "flex-column",
+                                          "id": "isbv3i"
+                                        },
+                                        "components": [
+                                          {
+                                            "tagName": "p",
+                                            "attributes": {
+                                              "id": "iasmd6"
+                                            },
+                                            "components": [
+                                              {
+                                                "tagName": "em",
+                                                "type": "text",
+                                                "components": [
+                                                  {
+                                                    "type": "textnode",
+                                                    "content": "\"I couldn't be happier with my new home! The team was professional, attentive, and truly cared about finding the perfect match for my family.\""
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "classes": [
+                                      "gjs-divider"
+                                    ],
+                                    "attributes": {
+                                      "id": "ifrc15"
+                                    }
+                                  },
+                                  {
+                                    "classes": [
+                                      "gjs-plg-flex-row"
+                                    ],
+                                    "attributes": {
+                                      "data-type-role": "flex-row",
+                                      "id": "in7e7h"
+                                    },
+                                    "components": [
+                                      {
+                                        "classes": [
+                                          "gjs-plg-flex-column"
+                                        ],
+                                        "attributes": {
+                                          "data-type-role": "flex-column",
+                                          "id": "i815oi"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "image",
+                                            "resizable": {
+                                              "ratioDefault": 1
+                                            },
+                                            "classes": [
+                                              "author-avatar"
+                                            ],
+                                            "attributes": {
+                                              "src": "../assets/external/images/6b524fc1-9ac0-4b1e-b729-65420c087761__lp-dreamspace-6.webp",
+                                              "alt": "Mark Smith",
+                                              "id": "ij1fve-2"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "classes": [
+                                          "gjs-plg-flex-column"
+                                        ],
+                                        "attributes": {
+                                          "data-type-role": "flex-column",
+                                          "id": "i53qc7"
+                                        },
+                                        "components": [
+                                          {
+                                            "tagName": "h5",
+                                            "type": "text",
+                                            "attributes": {
+                                              "id": "ibow7a"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "Julia Smith"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "tagName": "span",
+                                            "type": "text",
+                                            "attributes": {
+                                              "id": "itaw5i"
+                                            },
+                                            "components": [
+                                              {
+                                                "type": "textnode",
+                                                "content": "PayPal Inc"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "classes": [
+                              "swiper-pagination"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "comment",
+                "content": " CTA "
+              },
+              {
+                "tagName": "section",
+                "classes": [
+                  "gjs-section"
+                ],
+                "attributes": {
+                  "id": "ipw7v2"
+                },
+                "components": [
+                  {
+                    "classes": [
+                      "gjs-container"
+                    ],
+                    "attributes": {
+                      "id": "ihwfpx"
+                    },
+                    "components": [
+                      {
+                        "tagName": "h1",
+                        "type": "text",
+                        "attributes": {
+                          "id": "ijzmiu"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "What are you waiting for?"
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "p",
+                        "type": "text",
+                        "attributes": {
+                          "id": "iht5yh"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "\n          Start your journey to finding the perfect home today\n          "
+                          },
+                          {
+                            "tagName": "br",
+                            "void": true
+                          },
+                          {
+                            "type": "textnode",
+                            "content": "\n          Let us help you make your dream a reality\n        "
+                          }
+                        ]
+                      },
+                      {
+                        "tagName": "button",
+                        "type": "text",
+                        "attributes": {
+                          "type": "button",
+                          "id": "ihd71y"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "Your Dream House Here"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "comment",
+                "content": " Footer "
+              },
+              {
+                "tagName": "section",
+                "classes": [
+                  "gjs-section"
+                ],
+                "attributes": {
+                  "id": "itkk5i"
+                },
+                "components": [
+                  {
+                    "classes": [
+                      "gjs-container"
+                    ],
+                    "components": [
+                      {
+                        "tagName": "p",
+                        "type": "text",
+                        "classes": [
+                          "copyright",
+                          "text-white",
+                          "text-center"
+                        ],
+                        "attributes": {
+                          "id": "ikk40z"
+                        },
+                        "components": [
+                          {
+                            "type": "textnode",
+                            "content": "2025 © "
+                          },
+                          {
+                            "tagName": "b",
+                            "type": "text",
+                            "components": [
+                              {
+                                "type": "textnode",
+                                "content": "DreamSpace"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "textnode",
+                            "content": ". All rights reserved."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "head": {
+              "type": "head"
+            },
+            "docEl": {
+              "tagName": "html"
+            }
+          },
+          "id": "ZBxYZofUfBkt6Wt1"
+        }
+      ],
+      "type": "main",
+      "id": "Oe4eVtp9JqwUOrrH"
+    }
+  ],
+  "symbols": []
+}
