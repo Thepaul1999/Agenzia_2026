@@ -716,7 +716,7 @@ input[type="submit"].form-control:hover {
 #iwfdv6 {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.52)),
-    url("/images/hero/Sfondo_generale.jpg");
+    url("/images/hero/sfondo-home.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -904,7 +904,7 @@ input[type="submit"].form-control:hover {
   padding-bottom: 100px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/images/hero/Sfondo_generale.jpg");
+    url("/images/hero/sfondo-home.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
