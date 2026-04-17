@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "if exist .next rmdir /s /q .next && next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -26,4 +26,5 @@
     "tailwindcss": "^4",
     "typescript": "^5.9.3"
   }
+
 }
