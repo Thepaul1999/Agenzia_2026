@@ -1,16 +1,17 @@
-import "./globals.css";
-import Link from "next/link";
+import './globals.css'
+import SiteHeader from '@/app/components/SiteHeader'
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="it">
-      <body>
-          <main className="min-h-screen">{children}</main>
+      <body suppressHydrationWarning>
+        <SiteHeader />
+        <main className="min-h-screen">{children}</main>
       </body>
     </html>
-  );
+  )
 }

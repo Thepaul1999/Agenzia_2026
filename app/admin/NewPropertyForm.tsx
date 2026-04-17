@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 type ApiResponse = {
   success?: boolean
@@ -12,6 +13,7 @@ type ApiResponse = {
 }
 
 export default function NewPropertyForm() {
+  const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<ApiResponse | null>(null)
 
@@ -30,16 +32,16 @@ export default function NewPropertyForm() {
       })
 
       const data: ApiResponse = await response.json()
-
       setResult(data)
 
-     if (response.ok && data.success && data.id) {
-  form.reset()
-} else if (!data.error) {
-  setResult({
-    error: 'Salvataggio non confermato dal database.',
-  })
-}
+      if (response.ok && data.success && data.id) {
+        form.reset()
+        router.refresh()
+      } else if (!data.error) {
+        setResult({
+          error: 'Salvataggio non confermato dal database.',
+        })
+      }
     } catch {
       setResult({
         error: 'Errore imprevisto. Riprova.',
@@ -141,7 +143,7 @@ export default function NewPropertyForm() {
 
       {result?.success ? (
         <p className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700">
-          Immobile creato con successo.
+          Immobile creato con successo. {result.slug ? `Slug: ${result.slug}` : ''}
         </p>
       ) : null}
     </form>

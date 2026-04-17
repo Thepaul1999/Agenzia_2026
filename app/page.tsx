@@ -1,79 +1,110 @@
 import Link from 'next/link'
+import { createClient } from '@/lib/server'
 import './home.css'
 
-const featuredProperties = [
-  {
-    title: 'Atlanta, GA',
-    price: '€ 200.530',
-    image: '/images/home/property-1.webp',
-    featured: false,
-  },
-  {
-    title: 'Ocean Loft, GA',
-    price: '€ 125.400',
-    image: '/images/home/property-2.webp',
-    featured: true,
-  },
-  {
-    title: 'West Milford, NJ',
-    price: '€ 158.900',
-    image: '/images/home/property-3.webp',
-    featured: false,
-  },
-]
+type HomeHero = {
+  title?: string
+  subtitle?: string
+  buttonText?: string
+  buttonHref?: string
+  backgroundImage?: string
+}
 
-const testimonials = [
-  {
-    name: 'Mark Smith',
-    company: 'Envato Inc',
-    text: 'Working with DreamSpace was an amazing experience. They helped us find exactly what we were looking for in a home and made the process smooth and easy.',
-    image: '/images/home/testimonial-1.webp',
-  },
-  {
-    name: 'Julia Smith',
-    company: 'PayPal Inc',
-    text: "I couldn't be happier with my new home. The team was professional, attentive, and truly cared about finding the perfect match for my family.",
-    image: '/images/home/testimonial-2.webp',
-  },
-]
+type PropertyItem = {
+  id?: string | number
+  title?: string
+  slug?: string
+  city?: string
+  price?: number | string
+  image_url?: string
+  image?: string
+  featured?: boolean
+}
 
-export default function HomePage() {
+function formatEuro(value?: number | string) {
+  if (value === undefined || value === null || value === '') return ''
+  const num = typeof value === 'number' ? value : Number(value)
+  if (Number.isNaN(num)) return String(value)
+  return new Intl.NumberFormat('it-IT', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  }).format(num)
+}
+
+export default async function Page() {
+  const supabase = await createClient()
+
+  const [{ data: heroRow }, { data: properties }] = await Promise.all([
+    supabase
+      .from('site_content')
+      .select('value')
+      .eq('key', 'home_hero')
+      .maybeSingle(),
+    supabase
+      .from('immobili')
+      .select('id, title, slug, city, price, image_url, image, featured, created_at')
+      .order('featured', { ascending: false })
+      .order('created_at', { ascending: false })
+      .limit(8),
+  ])
+
+  const hero = heroRow?.value as HomeHero | undefined
+
+  const title = hero?.title?.trim() || 'Trova la casa giusta per te'
+  const subtitle =
+    hero?.subtitle?.trim() ||
+    'Una selezione di immobili nel Monferrato e dintorni, con un supporto semplice, diretto e professionale.'
+  const buttonText = hero?.buttonText?.trim() || 'Scopri le nostre proposte'
+  const buttonHref = hero?.buttonHref?.trim() || '/immobili'
+  const backgroundImage = hero?.backgroundImage?.trim() || '/images/hero/sfondo-home.jpg'
+
+  const safeProperties = Array.isArray(properties) ? properties : []
+
   return (
     <main className="home-page">
       <header className="site-header">
         <div className="container header-inner">
-          <Link href="/" className="site-logo">
-            DreamSpace
-          </Link>
+          <div className="header-spacer" />
 
           <details className="menu-dropdown">
-            <summary className="menu-toggle" aria-label="Apri menu">
-              <span />
-              <span />
-              <span />
+            <summary className="menu-toggle" aria-label="Apri menu principale">
+              <span className="menu-line" />
+              <span className="menu-line" />
+              <span className="menu-line" />
             </summary>
 
-            <nav className="menu-panel">
-              <Link href="/immobili">I nostri immobili</Link>
-              <Link href="/contatti">Contatti</Link>
-              <Link href="/login">Login</Link>
+            <nav className="menu-panel" aria-label="Menu principale">
+              <Link href="/immobili">Le nostre proposte</Link>
+              <Link href="/login">Area Riservata</Link>
             </nav>
           </details>
         </div>
       </header>
 
-      <section className="hero-section">
+      <section
+        className="hero-section"
+        style={{
+          backgroundImage: `
+            linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.08) 0%,
+              rgba(0, 0, 0, 0.06) 25%,
+              rgba(0, 0, 0, 0.14) 48%,
+              rgba(0, 0, 0, 0.38) 72%,
+              rgba(0, 0, 0, 0.62) 100%
+            ),
+            url("${backgroundImage}")
+          `,
+        }}
+      >
         <div className="container hero-inner">
           <div className="hero-content">
-            <h1>Find your dream house</h1>
-            <p className="hero-description">
-              Discover the perfect property that matches your lifestyle
-              <br />
-              Start your journey to homeownership today
-            </p>
+            <h1>{title}</h1>
+            <p className="hero-description">{subtitle}</p>
 
-            <Link href="/immobili" className="primary-button">
-              Your Dream House Here
+            <Link href={buttonHref} className="primary-button">
+              {buttonText}
             </Link>
           </div>
         </div>
@@ -82,30 +113,30 @@ export default function HomePage() {
       <section className="services-section">
         <div className="container services-grid">
           <div className="services-content">
-            <h2>Get your way to know more about your new house</h2>
+            <h2>Scopri di più sulla casa giusta per te</h2>
 
             <div className="service-item">
               <div className="service-icon">
-                <img src="/images/home/compass.png" alt="Explore areas" />
+                <img src="/images/home/compass.png" alt="Esplora nuove zone" />
               </div>
               <div className="service-text">
-                <h4>Explore New Areas</h4>
+                <h4>Esplora nuove zone</h4>
                 <p>
-                  Discover diverse neighborhoods and find the perfect location
-                  that suits your lifestyle and preferences.
+                  Scopri quartieri, paesi e contesti diversi per trovare la posizione
+                  più adatta al tuo stile di vita e alle tue esigenze.
                 </p>
               </div>
             </div>
 
             <div className="service-item">
               <div className="service-icon">
-                <img src="/images/home/witness.png" alt="Fresh perspective" />
+                <img src="/images/home/witness.png" alt="Una prospettiva diversa" />
               </div>
               <div className="service-text">
-                <h4>Get a Fresh Perspective</h4>
+                <h4>Una prospettiva diversa</h4>
                 <p>
-                  View properties from different angles and explore virtual tours
-                  to make informed decisions.
+                  Guarda gli immobili con più attenzione, confronta le soluzioni
+                  disponibili e scegli con maggiore consapevolezza.
                 </p>
               </div>
             </div>
@@ -114,36 +145,21 @@ export default function HomePage() {
           <div className="form-column">
             <div className="lead-card">
               <div className="lead-card-header">
-                <h4>Find Your Dream House</h4>
+                <h4>Trova la tua casa ideale</h4>
               </div>
 
-              <form className="lead-form">
-                <div className="form-group">
-                  <label htmlFor="fullName">Full Name</label>
-                  <input id="fullName" type="text" />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="businessEmail">Business Email</label>
-                  <input id="businessEmail" type="email" />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="phoneNumber">Phone Number</label>
-                  <input id="phoneNumber" type="text" />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="companyName">Company Name</label>
-                  <input id="companyName" type="text" />
-                </div>
+              <div className="lead-form">
+                <p className="lead-intro">
+                  Contattaci per ricevere informazioni sugli immobili disponibili e trovare
+                  la soluzione più adatta alle tue esigenze.
+                </p>
 
                 <div className="form-submit">
                   <Link href="/immobili" className="primary-button full">
-                    Your Dream House Here
+                    Vai alle proposte
                   </Link>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -152,53 +168,65 @@ export default function HomePage() {
       <section className="featured-section">
         <div className="container">
           <div className="section-header center">
-            <h2>Featured Properties</h2>
+            <h2>Le nostre proposte in evidenza</h2>
             <p>
-              Browse our selection of handpicked properties
-              <br />
-              carefully curated to meet your expectations
+              Scorri gli immobili selezionati e apri la scheda completa con un click.
             </p>
           </div>
 
-          <div className="properties-grid">
-            {featuredProperties.map((property) => (
-              <article className="property-card" key={property.title}>
-                {property.featured ? (
-                  <div className="featured-badge">Featured</div>
-                ) : null}
+          {safeProperties.length > 0 ? (
+            <div className="properties-scroll" aria-label="Immobili in evidenza">
+              {safeProperties.map((item, index) => {
+                const slug = item.slug || String(item.id || index)
+                const href = `/immobili/${slug}`
+                const imageSrc = item.image_url || item.image || '/images/home/property-1.webp'
+                const title = item.title?.trim() || 'Immobile in evidenza'
+                const city = item.city?.trim() || 'Monferrato'
+                const price = formatEuro(item.price)
+                const isFeatured = Boolean(item.featured)
 
-                <div className="property-image-wrap">
-                  <img
-                    src={property.image}
-                    alt={property.title}
-                    className="property-image"
-                  />
-                </div>
+                return (
+                  <Link key={slug} href={href} className="property-card property-card-link">
+                    {isFeatured ? <div className="featured-badge">In evidenza</div> : null}
 
-                <div className="property-body">
-                  <h4>{property.title}</h4>
-                  <span className="property-price">{property.price}</span>
-                </div>
-              </article>
-            ))}
-          </div>
+                    <div className="property-image-wrap">
+                      <img
+                        src={imageSrc}
+                        alt={title}
+                        className="property-image"
+                      />
+                    </div>
+
+                    <div className="property-body">
+                      <h4>{title}</h4>
+                      <p className="property-city">{city}</p>
+                      {price ? <span className="property-price">{price}</span> : null}
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          ) : (
+            <div className="properties-empty">
+              <p>Nessun immobile disponibile al momento.</p>
+            </div>
+          )}
         </div>
       </section>
 
       <section className="video-section">
         <div className="container video-inner">
           <div className="section-header center">
-            <h2>Watch Our Video</h2>
+            <h2>Guarda il nostro video</h2>
             <p>
-              Take a virtual tour and explore what makes us different
-              <br />
-              See how we help you find your dream home
+              Fai un piccolo tour virtuale e scopri il nostro modo di lavorare
+              per aiutarti a trovare la casa giusta.
             </p>
           </div>
 
           <img
             src="/images/home/video-preview.webp"
-            alt="Video Preview"
+            alt="Anteprima video"
             className="video-preview-image"
           />
         </div>
@@ -208,62 +236,90 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header center">
             <h2>
-              Some Clients Got Their Ways
+              Alcuni clienti hanno trovato
               <br />
-              to Find Dream House
+              la casa che cercavano
             </h2>
             <p>
-              Read success stories from our satisfied clients
-              <br />
-              who found their perfect homes with us
+              Leggi le esperienze di chi ha già trovato la soluzione giusta
+              con il nostro supporto.
             </p>
           </div>
 
           <div className="testimonials-grid">
-            {testimonials.map((item) => (
-              <article className="testimonial-card" key={item.name}>
-                <div className="testimonial-content">
-                  <span className="quote-mark">"</span>
-                  <p>
-                    <em>{item.text}</em>
-                  </p>
-                </div>
+            <article className="testimonial-card">
+              <div className="testimonial-content">
+                <span className="quote-mark">"</span>
+                <p>
+                  <em>
+                    Lavorare con DreamSpace è stata un’esperienza fantastica. Ci hanno
+                    aiutato a trovare esattamente quello che cercavamo, rendendo tutto
+                    il percorso molto più semplice.
+                  </em>
+                </p>
+              </div>
 
-                <div className="testimonial-author">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="author-avatar-image"
-                  />
-                  <div className="author-info">
-                    <h5>{item.name}</h5>
-                    <span>{item.company}</span>
-                  </div>
+              <div className="testimonial-author">
+                <img
+                  src="/images/home/testimonial-1.webp"
+                  alt="Mark Smith"
+                  className="author-avatar-image"
+                />
+                <div className="author-info">
+                  <h5>Mark Smith</h5>
+                  <span>Envato Inc</span>
                 </div>
-              </article>
-            ))}
+              </div>
+            </article>
+
+            <article className="testimonial-card">
+              <div className="testimonial-content">
+                <span className="quote-mark">"</span>
+                <p>
+                  <em>
+                    Non potrei essere più felice della mia nuova casa. Il team è stato
+                    professionale, attento e davvero interessato a trovare la soluzione
+                    migliore per la mia famiglia.
+                  </em>
+                </p>
+              </div>
+
+              <div className="testimonial-author">
+                <img
+                  src="/images/home/testimonial-2.webp"
+                  alt="Julia Smith"
+                  className="author-avatar-image"
+                />
+                <div className="author-info">
+                  <h5>Julia Smith</h5>
+                  <span>PayPal Inc</span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section className="cta-section">
         <div className="container cta-inner">
-          <h2>What are you waiting for?</h2>
+          <h2>Cosa stai aspettando?</h2>
           <p>
-            Start your journey to finding the perfect home today
+            Inizia oggi il tuo percorso verso la casa giusta
             <br />
-            Let us help you make your dream a reality
+            e lasciati aiutare a trasformare il tuo progetto in realtà.
           </p>
 
           <Link href="/immobili" className="primary-button">
-            Your Dream House Here
+            Scopri le nostre proposte
           </Link>
         </div>
       </section>
 
       <footer className="site-footer">
         <div className="container">
-          <p>2025 © <b>DreamSpace</b>. All rights reserved.</p>
+          <p>
+            2026 © <b>Agenzia Immobiliare Monferrato</b>. Tutti i diritti riservati.
+          </p>
         </div>
       </footer>
     </main>

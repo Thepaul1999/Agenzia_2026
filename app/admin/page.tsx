@@ -1,6 +1,5 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/server'
-import NewPropertyForm from './NewPropertyForm'
 
 export default async function AdminPage() {
   const supabase = await createClient()
@@ -14,48 +13,49 @@ export default async function AdminPage() {
     redirect('/login')
   }
 
-  const { data: adminUser, error: adminError } = await supabase
+  const { data: adminRow, error: adminError } = await supabase
     .from('admin_users')
-    .select('id, email, full_name, role, active')
+    .select('id, active, role')
     .eq('id', user.id)
     .maybeSingle()
 
-  if (adminError || !adminUser || !adminUser.active || adminUser.role !== 'admin') {
-    redirect('/login')
+  const isAdmin =
+    !adminError &&
+    !!adminRow &&
+    adminRow.active === true &&
+    adminRow.role === 'admin'
+
+  if (!isAdmin) {
+    redirect('/login?error=Accesso%20negato')
   }
 
   return (
-    <main className="min-h-screen bg-neutral-50 px-4 py-8 text-neutral-900">
-      <div className="mx-auto max-w-3xl space-y-6">
-        <header className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <div>
-              <h1 className="text-2xl font-semibold">Admin</h1>
-              <p className="mt-1 text-sm text-neutral-600">
-                Accesso effettuato come {adminUser.email}
-              </p>
-            </div>
+    <main className="mx-auto max-w-7xl px-4 py-10">
+      <div className="mb-8">
+        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+          Area riservata
+        </p>
+        <h1 className="mt-2 text-3xl font-semibold text-zinc-900">
+          Dashboard admin
+        </h1>
+        <p className="mt-3 max-w-2xl text-zinc-600">
+          Da qui puoi gestire i contenuti della home e gli immobili pubblicati.
+        </p>
+      </div>
 
-            <form action="/auth/signout" method="post">
-              <button
-                type="submit"
-                className="inline-flex h-10 items-center justify-center rounded-xl bg-neutral-900 px-4 text-sm font-medium text-white hover:bg-neutral-700"
-              >
-                Logout
-              </button>
-            </form>
-          </div>
-        </header>
-
-        <section className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold">Nuovo immobile</h2>
-          <p className="mt-1 text-sm text-neutral-600">
-            Inserisci i dati base e carica la foto copertina.
+      <div className="grid gap-6 md:grid-cols-2">
+        <section className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-semibold text-zinc-900">Hero home</h2>
+          <p className="mt-2 text-sm text-zinc-600">
+            Modifica titolo, sottotitolo, pulsante e immagine di sfondo della home.
           </p>
+        </section>
 
-          <div className="mt-6">
-            <NewPropertyForm />
-          </div>
+        <section className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-semibold text-zinc-900">Nuovo immobile</h2>
+          <p className="mt-2 text-sm text-zinc-600">
+            Crea una nuova scheda immobile con titolo, città, prezzo, descrizione e copertina.
+          </p>
         </section>
       </div>
     </main>
