@@ -1,11 +1,14 @@
-'use client'
-
-import { useSearchParams } from 'next/navigation'
 import { login } from './action'
 
-export default function LoginPage() {
-  const searchParams = useSearchParams()
-  const error = searchParams.get('error')
+type LoginPageProps = {
+  searchParams?: Promise<{
+    error?: string
+  }>
+}
+
+export default async function LoginPage({ searchParams }: LoginPageProps) {
+  const params = await searchParams
+  const error = params?.error
 
   return (
     <main className="min-h-screen bg-neutral-100 px-6 py-16">
